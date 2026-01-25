@@ -1,0 +1,33 @@
+.gitignore
+  7be59fa59dd32e47 3
+specs/content-plan.md
+  7be59fa59dd32e47 1-128
+astro.config.mjs
+  7be59fa59dd32e47 6,11
+CLAUDE.md
+  7be59fa59dd32e47 1-86
+specs/ideas.md
+  7be59fa59dd32e47 1-126
+specs/README.md
+  7be59fa59dd32e47 1-106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "f11e223d72581f8d179817052cf97d1eddc12b13",
+  "prompts": {
+    "7be59fa59dd32e47": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "71912d85-5c2c-4dbd-952a-27ffe6920d49",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 449,
+      "total_deletions": 2,
+      "accepted_lines": 449,
+      "overriden_lines": 0
+    }
+  }
+}
