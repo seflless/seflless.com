@@ -1,0 +1,29 @@
+specs/strategy.md
+  7be59fa59dd32e47 1-413
+CLAUDE.md
+  7be59fa59dd32e47 76,78-96
+specs/writing-style.md
+  7be59fa59dd32e47 1-259
+specs/README.md
+  7be59fa59dd32e47 3-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "727c823826f1ee87bf9dc190205ac97ae036bbc8",
+  "prompts": {
+    "7be59fa59dd32e47": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "71912d85-5c2c-4dbd-952a-27ffe6920d49",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 704,
+      "total_deletions": 10,
+      "accepted_lines": 704,
+      "overriden_lines": 0
+    }
+  }
+}
