@@ -14,15 +14,13 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={`${post.data.title} - Francois Laberge`} description={post.data.description}>
+<BaseLayout
+  title={`${post.data.title} - Francois Laberge`}
+  description={post.data.description}
+  favicon={post.data.emoji}
+>
   <article class="space-y-8">
     <header class="space-y-4">
-      <a
-        href="/blog"
-        class="text-sm text-muted-foreground hover:text-foreground transition-colors"
-      >
-        &larr; Back to blog
-      </a>
       <h1 class="text-3xl font-bold tracking-tight">{post.data.title}</h1>
       <div class="flex items-center gap-4 text-sm text-muted-foreground">
         <time datetime={post.data.date.toISOString()}>

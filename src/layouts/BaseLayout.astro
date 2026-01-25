@@ -1,94 +1,106 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { ThemeRow } from "@/components/ThemeRow";
+import { MobileNav } from "@/components/MobileNav";
+import EmojiFavicon from "@/components/EmojiFavicon.astro";
 import "../styles/global.css";
 
 interface Props {
   title: string;
   description?: string;
+  favicon?: string;
 }
 
-const { title, description = "Francois Laberge's personal blog" } = Astro.props;
+const { title, description = "Francois Laberge's personal blog", favicon = "✏️" } = Astro.props;
 const currentPath = Astro.url.pathname;
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
   { href: "/projects", label: "Projects" },
-  { href: "/resume", label: "Resume" },
 ];
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-    <ViewTransitions />
     <script is:inline>
-      // Prevent flash of wrong theme
+      // Prevent flash of wrong theme - must run before any CSS
       (function () {
-        const theme = localStorage.getItem("theme");
-        if (theme === "dark") {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isDark = stored === "dark" || (!stored && prefersDark);
+        if (isDark) {
           document.documentElement.classList.add("dark");
         }
       })();
     </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <EmojiFavicon emoji={favicon} />
+    <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="min-h-screen bg-background text-foreground">
-    <div class="flex min-h-screen">
-      <!-- Left Sidebar -->
-      <aside
-        class="fixed left-0 top-0 z-40 h-screen w-56 border-r border-border bg-sidebar"
-      >
-        <div class="flex h-full flex-col">
-          <!-- Logo / Name -->
-          <div class="flex h-14 items-center border-b border-sidebar-border px-4">
-            <a href="/" class="font-semibold text-sidebar-foreground">
-              Francois Laberge
-            </a>
-          </div>
-
-          <!-- Navigation -->
-          <nav class="flex-1 space-y-1 p-4">
-            {
-              navItems.map((item) => {
-                const isActive =
-                  currentPath === item.href ||
-                  (item.href !== "/" && currentPath.startsWith(item.href));
-                return (
-                  <a
-                    href={item.href}
-                    class:list={[
-                      "block rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                      isActive
-                        ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                        : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
-                    ]}
-                  >
-                    {item.label}
-                  </a>
-                );
-              })
-            }
+    <!-- Desktop Layout -->
+    <div class="hidden md:flex min-h-screen justify-center">
+      <div class="flex w-full max-w-4xl pt-12">
+        <!-- Left nav -->
+        <aside class="w-32 shrink-0 pl-6">
+          <nav class="sticky top-12">
+            {navItems.map((item) => {
+              const isActive = currentPath === item.href ||
+                (item.href !== "/" && currentPath.startsWith(item.href));
+              return (
+                <a
+                  href={item.href}
+                  class:list={[
+                    "block py-2 text-sm transition-colors whitespace-nowrap",
+                    isActive ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"
+                  ]}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+            <ThemeRow client:load />
           </nav>
+        </aside>
 
-          <!-- Theme Toggle -->
-          <div class="border-t border-sidebar-border p-4">
-            <ThemeToggle client:load />
+        <!-- Main content - aligned with first nav item -->
+        <main class="flex-1 max-w-2xl px-6">
+          <slot />
+        </main>
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="md:hidden min-h-screen">
+      <!-- Header -->
+      <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
+        <div class="px-6 py-3 flex items-center justify-between">
+          {currentPath !== "/" && (
+            <a href="/" class="text-muted-foreground/60 hover:text-muted-foreground transition-colors" aria-label="Back to home">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 19-7-7 7-7"/>
+                <path d="M19 12H5"/>
+              </svg>
+            </a>
+          )}
+          <div class="ml-auto">
+            <MobileNav items={navItems} currentPath={currentPath} client:load />
           </div>
         </div>
-      </aside>
+      </header>
 
       <!-- Main Content -->
-      <main class="ml-56 flex-1 p-8">
-        <div class="mx-auto max-w-3xl">
-          <slot />
-        </div>
+      <main class="px-6 pt-2 pb-6">
+        <slot />
       </main>
     </div>
   </body>
