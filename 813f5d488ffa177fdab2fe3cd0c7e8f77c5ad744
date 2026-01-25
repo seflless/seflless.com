@@ -1,0 +1,23 @@
+vercel.json
+  7be59fa59dd32e47 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "813f5d488ffa177fdab2fe3cd0c7e8f77c5ad744",
+  "prompts": {
+    "7be59fa59dd32e47": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "71912d85-5c2c-4dbd-952a-27ffe6920d49",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 0,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
