@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const projects = [
+  {
+    title: "This Blog",
+    description: "Built with Astro, React, and Tailwind. Each post can be its own creative playground.",
+    href: "https://github.com/francoislaberge/blog",
+  },
+  // Add more projects here
+];
+---
+
+<BaseLayout title="Projects - Francois Laberge">
+  <div class="space-y-6">
+    <h1 class="text-3xl font-bold tracking-tight">Projects</h1>
+    <p class="text-muted-foreground">Things I've built or am working on.</p>
+
+    <div class="grid gap-4">
+      {projects.map((project) => (
+        <a href={project.href} target="_blank" rel="noopener noreferrer" class="block group">
+          <Card className="transition-colors hover:bg-accent">
+            <CardHeader>
+              <CardTitle className="group-hover:text-accent-foreground">
+                {project.title}
+              </CardTitle>
+              <CardDescription>{project.description}</CardDescription>
+            </CardHeader>
+          </Card>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+title: "Posts Can Have Custom Styles"
+description: "Each blog post can have its own unique look and feel."
+date: 2025-01-23
+tags: ["design", "css"]
+pinned: false
+---
+
+# Custom Styling Per Post
+
+<div className="not-prose my-8 p-8 rounded-xl bg-gradient-to-br from-violet-500/20 to-pink-500/20 border border-violet-500/30">
+  <h2 className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
+    This section has custom styles!
+  </h2>
+  <p className="mt-4 text-muted-foreground">
+    The `not-prose` class lets us escape the default typography styles and do whatever we want.
+  </p>
+</div>
+
+## How It Works
+
+Since posts are MDX files, you can use any HTML or React component with Tailwind classes directly in your content.
+
+Want a different color scheme? Add custom CSS. Want a completely different layout? Create a custom layout component.
+
+### Example: A Callout Box
+
+<div className="not-prose my-4 flex gap-3 p-4 rounded-lg border-l-4 border-amber-500 bg-amber-500/10">
+  <span className="text-amber-500 text-xl">💡</span>
+  <div>
+    <strong className="text-amber-500">Pro tip:</strong>
+    <span className="text-muted-foreground ml-1">
+      You can build reusable callout components and import them in any post.
+    </span>
+  </div>
+</div>
+
+The possibilities are endless. Each post can be a creative playground while still sharing the same navigation and overall site structure.

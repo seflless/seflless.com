@@ -1,0 +1,31 @@
+---
+title: "Interactive Islands in Astro"
+description: "Demonstrating how Astro's islands architecture lets you add interactivity only where you need it."
+date: 2025-01-24
+tags: ["astro", "react", "tutorial"]
+pinned: false
+---
+
+import { Counter } from "@/components/Counter";
+
+# Interactive Components with Astro Islands
+
+One of the coolest features of Astro is its **islands architecture**. Instead of shipping a JavaScript framework to render the entire page, you can choose exactly which components need interactivity.
+
+## A Simple Counter
+
+Here's a React counter component. It only hydrates when the page loads, leaving the rest of the page as static HTML:
+
+<Counter client:load />
+
+The `client:load` directive tells Astro to hydrate this component on page load. There are other options too:
+
+- `client:idle` - Hydrate when the browser is idle
+- `client:visible` - Hydrate when the component enters the viewport
+- `client:media` - Hydrate based on a media query
+
+## Why This Matters
+
+This means you can have a blog post that's mostly static text (fast!) but still includes interactive elements where you need them. Each island is independent - it loads its own JavaScript and doesn't affect the rest of the page.
+
+Try clicking the counter above - it's a real React component, but the rest of this page is just HTML.

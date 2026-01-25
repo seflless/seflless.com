@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const posts = await getCollection("blog", ({ data }) => {
+  return data.pinned && !data.draft;
+});
+
+const pinnedPosts = posts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Francois Laberge">
+  <div class="space-y-8">
+    <section>
+      <h1 class="text-3xl font-bold tracking-tight">Hey, I'm Francois</h1>
+      <p class="mt-4 text-lg text-muted-foreground">
+        I build things on the web. This is my corner of the internet where I share
+        projects, thoughts, and experiments.
+      </p>
+    </section>
+
+    {pinnedPosts.length > 0 && (
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Featured</h2>
+        <div class="grid gap-4">
+          {pinnedPosts.map((post) => (
+            <a href={`/blog/${post.slug}`} class="block group">
+              <Card className="transition-colors hover:bg-accent">
+                <CardHeader>
+                  <CardTitle className="group-hover:text-accent-foreground">
+                    {post.data.title}
+                  </CardTitle>
+                  <CardDescription>{post.data.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Recent Posts</h2>
+      <p class="text-muted-foreground">
+        Check out the <a href="/blog" class="underline hover:text-foreground">blog</a> for all posts.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
