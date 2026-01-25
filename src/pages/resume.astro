@@ -1,0 +1,41 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume - Francois Laberge">
+  <div class="space-y-8">
+    <h1 class="text-3xl font-bold tracking-tight">Resume</h1>
+
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold">Experience</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-medium">Software Engineer</h3>
+          <p class="text-sm text-muted-foreground">Company Name - 2020 to Present</p>
+          <p class="mt-2 text-muted-foreground">
+            Description of work and accomplishments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold">Skills</h2>
+      <div class="flex flex-wrap gap-2">
+        {["TypeScript", "React", "Node.js", "Python", "Rust"].map((skill) => (
+          <span class="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold">Education</h2>
+      <div>
+        <h3 class="font-medium">Degree in Computer Science</h3>
+        <p class="text-sm text-muted-foreground">University Name - 2016</p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
