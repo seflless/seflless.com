@@ -1,0 +1,37 @@
+package.json
+  7be59fa59dd32e47 9-13
+.gitignore
+  7be59fa59dd32e47 26-30
+playwright.config.ts
+  7be59fa59dd32e47 1-26
+tests/snapshots.spec.ts
+  7be59fa59dd32e47 1-142
+specs/testing.md
+  7be59fa59dd32e47 1-183
+tests/links.spec.ts
+  7be59fa59dd32e47 1-160
+tsconfig.json
+  7be59fa59dd32e47 11-12
+specs/README.md
+  7be59fa59dd32e47 12,52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "20932286ba90eb761f7897f72c0633dac4ba56d7",
+  "prompts": {
+    "7be59fa59dd32e47": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "71912d85-5c2c-4dbd-952a-27ffe6920d49",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 525,
+      "total_deletions": 2,
+      "accepted_lines": 525,
+      "overriden_lines": 0
+    }
+  }
+}
