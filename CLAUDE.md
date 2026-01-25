@@ -73,14 +73,24 @@ Hydration options:
 ## Deployment
 Deployed to Vercel via GitHub integration. Push to main to deploy.
 
-## Documentation
-See `specs/` directory for:
-- `README.md` - Vision, goals, architecture details
-- `ideas.md` - Future features and content ideas
-- `content-plan.md` - Content planning and backlog
+## Documentation (`specs/` directory)
 
-## Writing Guidelines
-(Future: writing style skill to be added)
-- Clear, concise technical writing
-- Code examples where helpful
-- Personal voice encouraged
+| Document | Purpose |
+|----------|---------|
+| `README.md` | Vision, architecture, technical roadmap |
+| `strategy.md` | **Content strategy, distribution, narrative planning** |
+| `writing-style.md` | **Voice, tone, editing guidelines** |
+| `content-plan.md` | Active content backlog and workflow |
+| `ideas.md` | Unstructured idea capture |
+
+### Key Strategy Concepts
+- **Content Pillars** - 3-5 themes that all posts connect to
+- **Campaigns** - Coordinated series of related posts
+- **Evergreen Strategy** - Posts that stay relevant long-term
+- **Distribution Protocol** - Where/how to share content
+
+### Writing Guidelines (see `specs/writing-style.md`)
+- Be useful first - every post should leave reader with something
+- Show, don't tell - demos > explanations
+- Earn personal stories - anecdotes must serve the reader
+- Technical accuracy > oversimplification

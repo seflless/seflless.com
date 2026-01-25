@@ -1,5 +1,17 @@
 # Blog Specification
 
+## Documentation Index
+
+| Document | Purpose |
+|----------|---------|
+| **README.md** (this) | Vision, architecture, technical roadmap |
+| **strategy.md** | Content strategy, distribution, narrative planning |
+| **writing-style.md** | Voice, tone, editing guidelines |
+| **content-plan.md** | Active content backlog and workflow |
+| **ideas.md** | Unstructured idea capture |
+
+---
+
 ## Vision
 A personal blog that serves as a creative playground where each post can be its own mini-application. Not just text - but interactive experiments, generative art, games, visualizations. A space to share both polished work and rough experiments.
 
