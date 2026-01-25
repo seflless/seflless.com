@@ -1,0 +1,51 @@
+src/pages/about.astro
+  7be59fa59dd32e47 1-24
+src/pages/index.astro
+  7be59fa59dd32e47 2-4,6-12,14-43,45-52
+src/pages/blog/[...slug].astro
+  7be59fa59dd32e47 1-51
+src/layouts/BaseLayout.astro
+  7be59fa59dd32e47 1-95
+src/components/Counter.tsx
+  7be59fa59dd32e47 1-28
+src/pages/resume.astro
+  7be59fa59dd32e47 1-41
+src/content/blog/hello-world.mdx
+  7be59fa59dd32e47 1-26
+src/content/blog/custom-styles.mdx
+  7be59fa59dd32e47 1-38
+src/content/blog/interactive-islands.mdx
+  7be59fa59dd32e47 1-31
+src/pages/blog/index.astro
+  7be59fa59dd32e47 1-49
+tsconfig.json
+  7be59fa59dd32e47 7-11
+src/styles/global.css
+  7be59fa59dd32e47 3,124-156
+src/components/ThemeToggle.tsx
+  7be59fa59dd32e47 1-90
+src/pages/projects.astro
+  7be59fa59dd32e47 1-35
+src/content/config.ts
+  7be59fa59dd32e47 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "3bc94ace7bbde5efff9490016bda1743d91e5d66",
+  "prompts": {
+    "7be59fa59dd32e47": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "71912d85-5c2c-4dbd-952a-27ffe6920d49",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 612,
+      "total_deletions": 21,
+      "accepted_lines": 610,
+      "overriden_lines": 0
+    }
+  }
+}
