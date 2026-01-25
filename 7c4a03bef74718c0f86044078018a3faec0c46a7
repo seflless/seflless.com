@@ -1,0 +1,23 @@
+src/layouts/BaseLayout.astro
+  d917d6d340f1f6d6 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "7c4a03bef74718c0f86044078018a3faec0c46a7",
+  "prompts": {
+    "d917d6d340f1f6d6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2bd3fc16-9f74-4d3d-88ba-1bcd6b20f6d3",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
