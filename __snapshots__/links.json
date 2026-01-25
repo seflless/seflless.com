@@ -1,0 +1,112 @@
+{
+  "pages": {
+    "/": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume",
+        "/blog/hello-world",
+        "/blog"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:58.903Z"
+    },
+    "/about": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:58.949Z"
+    },
+    "/blog": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume",
+        "/blog/hello-world",
+        "/blog/interactive-islands",
+        "/blog/custom-styles"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:58.966Z"
+    },
+    "/projects": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume"
+      ],
+      "externalLinks": [
+        "https://github.com/francoislaberge/blog"
+      ],
+      "lastChecked": "2026-01-25T14:53:58.989Z"
+    },
+    "/resume": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:59.006Z"
+    },
+    "/blog/hello-world": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume",
+        "/blog"
+      ],
+      "externalLinks": [
+        "https://astro.build"
+      ],
+      "lastChecked": "2026-01-25T14:53:59.022Z"
+    },
+    "/blog/interactive-islands": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume",
+        "/blog"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:59.041Z"
+    },
+    "/blog/custom-styles": {
+      "internalLinks": [
+        "/",
+        "/",
+        "/about",
+        "/blog",
+        "/projects",
+        "/resume",
+        "/blog"
+      ],
+      "externalLinks": [],
+      "lastChecked": "2026-01-25T14:53:59.057Z"
+    }
+  }
+}

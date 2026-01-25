@@ -9,6 +9,7 @@
 | **writing-style.md** | Voice, tone, editing guidelines |
 | **content-plan.md** | Active content backlog and workflow |
 | **ideas.md** | Unstructured idea capture |
+| **testing.md** | Testing strategy, snapshots, CI |
 
 ---
 
@@ -48,6 +49,7 @@ Adding a post should be: create MDX file, write content, push. No complex build 
 - [x] MDX support with component imports
 - [x] 3 sample posts (text, interactive, custom styles)
 - [x] Vercel deployment
+- [x] Playwright tests (links, HTML snapshots, visual snapshots)
 
 ### Pages
 - **Home** - Featured/pinned posts
