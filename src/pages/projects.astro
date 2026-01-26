@@ -4,11 +4,16 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 
 const projects = [
   {
+    title: "Resizable Cursors",
+    description: "Scale your cursor from tiny to humongous. A demo exploring custom cursor rendering at any size.",
+    href: "/project/resizeable-cursors",
+    internal: true,
+  },
+  {
     title: "This Blog",
     description: "Built with Astro, React, and Tailwind. Each post can be its own creative playground.",
     href: "https://github.com/francoislaberge/blog",
   },
-  // Add more projects here
 ];
 ---
 
@@ -19,7 +24,12 @@ const projects = [
 
     <div class="grid gap-4">
       {projects.map((project) => (
-        <a href={project.href} target="_blank" rel="noopener noreferrer" class="block group">
+        <a
+          href={project.href}
+          target={project.internal ? undefined : "_blank"}
+          rel={project.internal ? undefined : "noopener noreferrer"}
+          class="block group"
+        >
           <Card className="transition-colors hover:bg-accent">
             <CardHeader>
               <CardTitle className="group-hover:text-accent-foreground">

@@ -1,0 +1,46 @@
+---
+import EmojiFavicon from "@/components/EmojiFavicon.astro";
+import { ResizableCursors } from "@/components/resizable-cursors/ResizableCursors";
+import "@/styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A demo of resizable cursors - scale your cursor from tiny to humongous" />
+    <meta name="color-scheme" content="light dark" />
+    <EmojiFavicon emoji="🖱️" />
+    <title>Resizable Cursors - Francois Laberge</title>
+    <style>
+      html, html * {
+        cursor: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-foreground">
+    <a
+      href="/projects"
+      class="fixed top-4 left-4 z-50 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white dark:hover:bg-gray-800 transition-colors"
+      aria-label="Back to projects"
+      data-big-cursor="pointer"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 19-7-7 7-7"/>
+        <path d="M19 12H5"/>
+      </svg>
+    </a>
+
+    <ResizableCursors client:load />
+  </body>
+</html>
