@@ -1,0 +1,31 @@
+src/components/resizable-cursors/ResizableCursors.tsx
+  8ca69f7096564f22 1-78
+src/components/resizable-cursors/Cursor.tsx
+  8ca69f7096564f22 1-80
+src/components/resizable-cursors/CursorList.tsx
+  8ca69f7096564f22 1-112
+src/pages/projects.astro
+  8ca69f7096564f22 7-11,29-30
+src/pages/project/resizeable-cursors.astro
+  8ca69f7096564f22 8,14,26,31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "5fa400f051fcd47170209599437dfa0799bcbbda",
+  "prompts": {
+    "8ca69f7096564f22": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "86a8a3aa-636d-4c7d-b302-dd869585cbf5",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 520,
+      "total_deletions": 186,
+      "accepted_lines": 341,
+      "overriden_lines": 0
+    }
+  }
+}
