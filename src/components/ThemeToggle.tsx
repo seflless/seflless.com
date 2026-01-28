@@ -14,30 +14,11 @@ export function ThemeToggle() {
     document.documentElement.classList.toggle("dark", initial === "dark");
   }, []);
 
-  const toggleTheme = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-
-    // Get click coordinates for circle animation
-    const x = e.clientX;
-    const y = e.clientY;
-
-    // Set CSS custom properties for the animation origin
-    document.documentElement.style.setProperty("--toggle-x", `${x}px`);
-    document.documentElement.style.setProperty("--toggle-y", `${y}px`);
-
-    // Check if View Transitions API is supported
-    if (document.startViewTransition) {
-      await document.startViewTransition(() => {
-        document.documentElement.classList.toggle("dark", newTheme === "dark");
-        setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-      }).ready;
-    } else {
-      // Fallback for browsers without View Transitions
-      document.documentElement.classList.toggle("dark", newTheme === "dark");
-      setTheme(newTheme);
-      localStorage.setItem("theme", newTheme);
-    }
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
