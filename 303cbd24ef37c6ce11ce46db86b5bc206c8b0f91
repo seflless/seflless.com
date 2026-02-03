@@ -1,0 +1,25 @@
+src/styles/global.css
+  a90126d7ab98ba9e 129-133
+src/components/ThemeToggle.tsx
+  a90126d7ab98ba9e 17,21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.41",
+  "base_commit_sha": "303cbd24ef37c6ce11ce46db86b5bc206c8b0f91",
+  "prompts": {
+    "a90126d7ab98ba9e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b6d15ed4-ce27-4f47-baf3-9d125d139d5e",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 56,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}
