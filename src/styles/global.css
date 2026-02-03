@@ -126,35 +126,9 @@
   }
 }
 
-/* View Transitions - Circle Theme Toggle Animation */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-}
-
-::view-transition-new(root) {
-  z-index: 9999;
-  animation: circle-clip 0.5s ease-out;
-}
-
-@keyframes circle-clip {
-  from {
-    clip-path: circle(0% at var(--toggle-x, 50%) var(--toggle-y, 50%));
-  }
-  to {
-    clip-path: circle(150% at var(--toggle-x, 50%) var(--toggle-y, 50%));
-  }
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none !important;
-  }
+/* Disable color transitions during theme changes to prevent lingering light/dark artifacts */
+*,
+*::before,
+*::after {
+  transition-property: transform, opacity, box-shadow;
 }
