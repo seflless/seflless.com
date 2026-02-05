@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { CustomCursor } from "./Cursor";
 import { CursorList } from "./CursorList";
+import "./resizeable-cursors.css";
 
-const MinCursorSize = 5;
-const RegularSized = 20;
-const MaxCursorSize = 250;
+const MinCursorSize = 10;
+const RegularSized = 50;
+const MaxCursorSize = 150;
 const ResizeGranularity = 1000.0;
 
 function scaleToCursorSize(scale: number) {
@@ -18,16 +19,13 @@ function scaleToCursorSize(scale: number) {
 }
 
 export function ResizableCursors() {
-  const [cursorScale, setCursorScale] = useState(0.7);
+  const [cursorScale, setCursorScale] = useState(0.15);
 
   return (
-    <div className="min-h-screen bg-[rgb(200,255,200)] dark:bg-[rgb(30,60,30)] flex justify-center">
+    <div className="resizable-cursors min-h-screen bg-[rgb(200,255,200)] dark:bg-[rgb(30,60,30)] flex justify-center">
       <CustomCursor cursorSize={scaleToCursorSize(cursorScale)} />
       <div className="p-5 text-center flex flex-col items-center max-w-[800px]">
-        <h1
-          className="text-4xl font-semibold my-2"
-          data-big-cursor="text"
-        >
+        <h1 className="text-4xl font-semibold my-2" data-big-cursor="text">
           Resizable Cursors
         </h1>
 
@@ -66,7 +64,10 @@ export function ResizableCursors() {
           <h2 className="text-2xl font-medium my-2" data-big-cursor="text">
             Built-in CSS Cursors
           </h2>
-          <p className="text-black/60 dark:text-white/60" data-big-cursor="text">
+          <p
+            className="text-black/60 dark:text-white/60"
+            data-big-cursor="text"
+          >
             Hover to humongify
           </p>
         </div>
