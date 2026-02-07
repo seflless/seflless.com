@@ -1,0 +1,23 @@
+src/pages/project/resizeable-cursors.astro
+  454044f152cbe97d 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.1",
+  "base_commit_sha": "871d1c7742d09e90d51cb3ef0f1de424d8ab50b6",
+  "prompts": {
+    "454044f152cbe97d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e3b4439d-ce3c-4c43-a4bd-92db5ffcf4a3",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
