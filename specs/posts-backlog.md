@@ -33,4 +33,12 @@ https://x.com/theo/status/2018091358251372601
 
 ### Typematic
 
+### Infinite Canvas / Diagramming Apps Commentator
+
+- Interview founders (or long term companies too)
+- Give a report of my trying out tools and my takes
+- Explain my read of the land, the players, which features are trending, what's missing, etc.
+- Comment on what I think is missing
+- Be a thought leader
+
 ###
