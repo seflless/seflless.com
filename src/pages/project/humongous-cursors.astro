@@ -1,6 +1,6 @@
 ---
 import EmojiFavicon from "@/components/EmojiFavicon.astro";
-import { ResizableCursors } from "@/components/resizable-cursors/ResizableCursors";
+import { HumongousCursors } from "@/components/humongous-cursors/HumongousCursors";
 import "@/styles/global.css";
 ---
 
@@ -18,10 +18,10 @@ import "@/styles/global.css";
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A demo of resizable cursors - scale your cursor from tiny to humongous" />
+    <meta name="description" content="A demo of humongous cursors - scale your cursor from tiny to humongous" />
     <meta name="color-scheme" content="light dark" />
     <EmojiFavicon emoji="👆" />
-    <title>Resizable Cursors - Francois Laberge</title>
+    <title>Humongous Cursors - Francois Laberge</title>
     <style>
       html, html * {
         cursor: none !important;
@@ -41,6 +41,6 @@ import "@/styles/global.css";
       </svg>
     </a>
 
-    <ResizableCursors client:load />
+    <HumongousCursors client:load />
   </body>
 </html>

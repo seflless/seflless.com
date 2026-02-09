@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { CustomCursor } from "./Cursor";
 import { CursorList } from "./CursorList";
-import "./resizeable-cursors.css";
+import "./humongous-cursors.css";
 
 const MinCursorSize = 10;
 const RegularSized = 50;
 const MaxCursorSize = 150;
-const ResizeGranularity = 1000.0;
+const SliderGranularity = 1000.0;
 
 function scaleToCursorSize(scale: number) {
   if (scale < 0.5) {
@@ -18,26 +18,51 @@ function scaleToCursorSize(scale: number) {
   }
 }
 
-export function ResizableCursors() {
-  const [cursorScale, setCursorScale] = useState(0.15);
+export function HumongousCursors() {
+  const [cursorScale, setCursorScale] = useState(0.65);
 
   return (
-    <div className="resizable-cursors min-h-screen bg-[rgb(200,255,200)] dark:bg-[rgb(30,60,30)] flex justify-center">
+    <div className="humongous-cursors min-h-screen bg-[rgb(200,255,200)] dark:bg-[rgb(30,60,30)] flex justify-center">
       <CustomCursor cursorSize={scaleToCursorSize(cursorScale)} />
       <div className="p-5 text-center flex flex-col items-center max-w-[800px]">
         <h1 className="text-4xl font-semibold my-2" data-big-cursor="text">
-          Resizable Cursors
+          Humongous Cursors
         </h1>
+        <p
+          className="text-sm text-black/50 dark:text-white/50"
+          data-big-cursor="text"
+        >
+          Cursor design from{" "}
+          <a
+            href="https://www.figma.com/community/file/1128661965060150159"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-black/70 dark:hover:text-white/70"
+            data-big-cursor="pointer"
+          >
+            🐭 Cursors MacOS & Windows Kit
+          </a>{" "}
+          by{" "}
+          <a
+            href="https://www.figma.com/@julienfovelle"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-black/70 dark:hover:text-white/70"
+            data-big-cursor="pointer"
+          >
+            Julien Fovelle
+          </a>
+        </p>
 
         <div className="flex flex-row items-center justify-center my-6">
           <span className="mx-4 text-xl">Tiny</span>
           <input
             type="range"
-            value={cursorScale * ResizeGranularity}
+            value={cursorScale * SliderGranularity}
             min={0}
-            max={ResizeGranularity}
+            max={SliderGranularity}
             onChange={(e) =>
-              setCursorScale(parseFloat(e.target.value) / ResizeGranularity)
+              setCursorScale(parseFloat(e.target.value) / SliderGranularity)
             }
             className="w-48 accent-blue-500"
             data-big-cursor="pointer"
