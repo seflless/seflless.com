@@ -1,0 +1,25 @@
+src/pages/projects.astro
+  6dbd1c88f766b946 6-9,14,25,31,33-47
+src/components/humongous-cursors/humongous-cursors.css
+  6dbd1c88f766b946 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.1",
+  "base_commit_sha": "4f4fdc06c0eb4d3e590d6510f913c89a4cf95236",
+  "prompts": {
+    "6dbd1c88f766b946": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5f6724f6-65de-4719-a29d-d5d46b1bd3f1",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 58,
+      "total_deletions": 29,
+      "accepted_lines": 23,
+      "overriden_lines": 0
+    }
+  }
+}
