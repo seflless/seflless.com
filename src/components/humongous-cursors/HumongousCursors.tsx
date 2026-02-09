@@ -34,24 +34,25 @@ export function HumongousCursors() {
         >
           Cursor design from{" "}
           <a
-            href="https://www.figma.com/community/file/1128661965060150159"
+            href="https://www.figma.com/community/file/1166285742532409787"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-black/70 dark:hover:text-white/70"
             data-big-cursor="pointer"
           >
-            🐭 Cursors MacOS & Windows Kit
+            Cursors
           </a>{" "}
           by{" "}
           <a
-            href="https://www.figma.com/@julienfovelle"
+            href="https://www.figma.com/@antonkartashov"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-black/70 dark:hover:text-white/70"
             data-big-cursor="pointer"
           >
-            Julien Fovelle
-          </a>
+            Anton Kartashov
+          </a>{" "}
+          (CC BY 4.0)
         </p>
 
         <div className="flex flex-row items-center justify-center my-6">
