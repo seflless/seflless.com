@@ -1,0 +1,23 @@
+src/components/humongous-cursors/HumongousCursors.tsx
+  e769a0f5558920a7 37,43,47,53-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.42",
+  "base_commit_sha": "f9df50c587241346a0d8766939cb7c3a51ef2918",
+  "prompts": {
+    "e769a0f5558920a7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c51c9835-76ab-41e4-beaf-981ac7fa34e5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 5,
+      "accepted_lines": 6,
+      "overriden_lines": 0
+    }
+  }
+}
