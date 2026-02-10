@@ -10,9 +10,11 @@ const projects = [
     internal: true,
   },
   {
-    title: "This Blog",
-    description: "Built with Astro, React, and Tailwind.",
-    href: "https://github.com/francoislaberge/blog",
+    title: "Skewed",
+    description: "A 3D engine that renders SVG, with a React reconciler.",
+    href: "/project/skewed",
+    image: "/projects/skewed/light-spinning-around-shapes.gif",
+    internal: true,
   },
 ];
 ---
@@ -20,7 +22,7 @@ const projects = [
 <BaseLayout title="Projects - Francois Laberge" favicon="🧪">
   <div class="space-y-6">
     <h1 class="text-3xl font-bold tracking-tight">Projects</h1>
-    <p class="text-muted-foreground">Things I've built or am working on.</p>
+    <p class="text-muted-foreground">I'm slowly adding entries for some of my favorite personal projects.
 
     <div class="grid grid-cols-2 gap-4">
       {projects.map((project) => (

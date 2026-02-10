@@ -1,0 +1,65 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Skewed - Francois Laberge" favicon="🎲">
+  <div class="space-y-8 max-w-2xl">
+    <div>
+      <a
+        href="/projects"
+        class="text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        &larr; Back to Projects
+      </a>
+    </div>
+
+    <div class="space-y-1">
+      <p class="text-xs text-muted-foreground uppercase tracking-wide">October 2023</p>
+      <h1 class="text-3xl font-bold tracking-tight">Skewed</h1>
+      <p class="text-muted-foreground">
+        An easy to use 3D engine that renders SVG, written in TypeScript.
+      </p>
+    </div>
+
+    <div class="prose dark:prose-invert max-w-none space-y-4">
+      <p>
+        Skewed is a TypeScript-based 3D engine that renders SVG. It:
+      </p>
+      <ul>
+        <li>Facilitates interactive explanations needing neat 3D visuals.</li>
+        <li>Outputs pristine SVG for additional manipulation in Figma.</li>
+        <li>Uses a React renderer with a custom reconciler.</li>
+        <li>Aiming for exceptionally clean code, though it's a work in progress.</li>
+      </ul>
+
+      <p>
+        Here's a <a href="https://vgyf3c.csb.app/" target="_blank" rel="noopener noreferrer">live demo</a>.
+        Check it out on GitHub: <a href="https://github.com/seflless/skewed" target="_blank" rel="noopener noreferrer">github.com/seflless/skewed</a>.
+      </p>
+
+      <div class="space-y-6">
+        <img
+          src="/projects/skewed/light-spinning-around-shapes.gif"
+          alt="Light spinning around 3D shapes rendered as SVG"
+          class="rounded-lg w-full"
+          width="640"
+          height="478"
+        />
+        <img
+          src="/projects/skewed/octopus.gif"
+          alt="3D octopus rendered as SVG"
+          class="rounded-lg w-full"
+          width="640"
+          height="478"
+        />
+        <img
+          src="/projects/skewed/rotating-text.gif"
+          alt="Rotating 3D text rendered as SVG"
+          class="rounded-lg w-full"
+          width="640"
+          height="478"
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
