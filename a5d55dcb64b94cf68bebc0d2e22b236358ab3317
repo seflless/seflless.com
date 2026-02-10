@@ -1,0 +1,23 @@
+src/pages/projects.astro
+  cee1d86dfa3285e1 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.42",
+  "base_commit_sha": "a5d55dcb64b94cf68bebc0d2e22b236358ab3317",
+  "prompts": {
+    "cee1d86dfa3285e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4aeb795-5216-4377-9c8d-f74a243490ae",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
