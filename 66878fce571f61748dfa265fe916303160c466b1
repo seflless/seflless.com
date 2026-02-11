@@ -1,0 +1,23 @@
+src/pages/project/skewed.astro
+  0aecaad987eb5d88 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.1",
+  "base_commit_sha": "66878fce571f61748dfa265fe916303160c466b1",
+  "prompts": {
+    "0aecaad987eb5d88": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e80273f-7b6d-48d9-9c33-7aa1da06a7ed",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Francois Laberge <francoislaberge@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
